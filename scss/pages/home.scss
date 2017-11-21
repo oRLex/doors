@@ -1,0 +1,272 @@
+// global styles
+@import "../global";
+
+// home page style
+.top-navbar {
+  background-color: #db3534;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  @include box-shadow(0 5px 5px rgba(16,16,15,.5));
+  @media (max-width: $screen-sm){
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+    .hamburger {
+      //margin-top: 0.7rem;
+      color: #fff;
+      font-size: 3rem;
+      cursor: pointer;
+        @media (max-width: $screen-sm){
+          display: block;
+          position: relative;
+          //top: -1.3rem;
+        }
+    }
+  .hero-nav{
+    display: inline-block;
+    ul{
+      display: inline-block;
+      .nav-item{
+        margin-top: 0.5rem;
+        display: inline-block;
+        a{
+          font-family: $fontBase;
+          font-size: 1.6rem;
+          text-decoration: none;
+          color: #c1c1c1;
+          margin-right: 2rem;
+          transition: 0.3s;
+            &:hover{
+              color: white;
+            }
+        }
+      }
+    }
+    @media (max-width: $screen-sm){
+          ul {
+            display: none;
+            .nav-item {
+              display: block;
+              margin-top: -0.5rem;
+              a {
+                font-size: 1.8rem;
+                line-height: 5rem;
+                padding-right: 0rem;
+              }
+            }
+          }
+    }
+
+  }
+  .trash{
+    img{
+      padding-top:0.2rem;
+    }
+    padding-top: 0.5rem;
+    .trash-counter{
+      margin-left: 1.2rem;
+      .goods-counter{
+        p{
+          font-size:1.2rem;
+          margin: 0;
+        }
+      }
+      .goods-sum{
+        p{
+          font-size:1.2rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .lang-chose{
+    margin-top: 0.8rem;
+    .lang-rectangle{
+      background: url("../../img/rectangle-lang.png") no-repeat;
+      width:3rem;
+      height:3rem;
+      background-color: rgba(0,0,0,.3);
+      -webkit-box-shadow: 0 1px 1px rgba(255,255,255,.5), inset 0 2px 5px #000;
+      -moz-box-shadow: 0 1px 1px rgba(255,255,255,.5), inset 0 2px 5px #000;
+      box-shadow: 0 1px 1px rgba(255,255,255,.5), inset 0 2px 5px #000;
+
+      &:first-child{
+        margin-left:1rem;
+      }
+      a{
+        margin-left:0.5rem;
+        text-align: center;
+        text-decoration: none;
+        color: #e53837;
+      }
+    }
+  }
+  input[type="text"]{
+    border: 0;
+    margin-top: 0.75rem;
+    padding: 1rem;
+    color: #ffffff;
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0,0,0,.3) !important;
+    @include box-shadow(0 1px 1px rgba(255,255,255,.5), inset 0 2px 5px #000);
+    outline: none;
+    background: url("../../img/fing.png") no-repeat;
+    background-position: 97% 50%;
+    &::placeholder{
+      color: #ff3f3e;
+    }
+  }
+}
+
+//bg-image
+
+.bg-hero{
+  background: url("../../img/bg/bg-green.jpg") no-repeat center center;
+  position: absolute;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width:100%;
+
+    .registration{
+      margin-bottom: 1rem;
+      .big-sing{
+        margin: 0;
+        padding:0;
+        a{
+          color: #ffffff;
+          font-size: 1.5rem;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+       a{
+         color: #ffffff;
+          font-size:1.2rem;
+          text-decoration: underline;
+        }
+    }
+
+    .social-links{
+      margin-bottom:1rem;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        li{
+          display: inline;
+        }
+       }
+
+    }
+  .trash-copy{
+    width:20rem;
+    height:6.7rem;
+    -webkit-border-radius: 2px/3px 3px 2px 2px;
+    -moz-border-radius: 2px/3px 3px 2px 2px;
+    border-radius: 2px/3px 3px 2px 2px;
+    background-color: #de3635;
+    -webkit-box-shadow: 0 2px 5px rgba(1,1,1,.5), inset 0 1px 1px rgba(255,255,255,.29);
+    -moz-box-shadow: 0 2px 5px rgba(1,1,1,.5), inset 0 1px 1px rgba(255,255,255,.29);
+    box-shadow: 0 2px 5px rgba(1,1,1,.5), inset 0 1px 1px rgba(255,255,255,.29);
+    background-image: -webkit-linear-gradient(bottom, rgba(176,39,39,.54), rgba(222,54,53,.54));
+    background-image: -moz-linear-gradient(bottom, rgba(176,39,39,.54), rgba(222,54,53,.54));
+    background-image: -o-linear-gradient(bottom, rgba(176,39,39,.54), rgba(222,54,53,.54));
+    background-image: -ms-linear-gradient(bottom, rgba(176,39,39,.54), rgba(222,54,53,.54));
+    background-image: linear-gradient(to top, rgba(176,39,39,.54), rgba(222,54,53,.54));
+    .trash-image{
+      display: block;
+      margin-top:1rem;
+      padding-left:1rem;
+    }
+    .trash-counter-copy{
+      margin-left:2rem;
+      .goods-trash{
+        p{
+          margin: 0;
+          padding:0;
+          font-size:2rem;
+          font-weight: bold;
+        }
+
+      }
+      .good-number{
+        p{
+          font-size:1.2rem;
+          margin: 0;
+          padding:0;
+        }
+      }
+      .goods-cash{
+
+        p{
+          font-size:1.2rem;
+          margin: 0;
+          padding:0;
+        }
+      }
+    }
+  }
+  .center-logo{
+    img{
+      display: block;
+    }
+    h1{
+      background-color: #565656;
+      color: transparent;
+      text-shadow: 2px 2px 3px rgba(86,116,42,0.5);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+    }
+  }
+  .phone-block{
+    margin-bottom:1rem;
+    p{
+      margin:0;
+      padding:0;
+      text-align: center;
+      &:nth-child(2){
+        font-weight: bold;
+        font-size:2rem;
+      }
+    }
+
+    .h2{
+      font-weight: bold;
+      margin:0;
+      padding:0;
+    }
+  }
+
+  .dors-block{
+    position: relative;
+    top: 18rem;
+    .doors{
+      img{
+        width:14rem;
+        height:30rem;
+      }
+      h3{
+        font-size:5.2rem;
+      }
+      h4{
+        font-size:1.8rem;
+      }
+      .description{
+        font-weight: bold;
+        color: #608b30;
+        text-shadow: 0 1px 1px rgba(255,255,255,.75), inset 0 1px 3px rgba(0,0,0,.75);
+      }
+    }
+
+  }
+}
+
+
+
+
+
